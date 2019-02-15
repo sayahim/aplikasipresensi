@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:card_view="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -34,7 +35,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nama Karyawan"
+                    android:text="Nama karyawan"
                     android:textColor="@color/grey"
                     android:textSize="13dp"
                     android:textStyle="bold"/>
@@ -51,14 +52,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lokasi"
+                    android:text="Jenis Izin"
                     android:textColor="@color/grey"
                     android:textSize="13dp"
                     android:textStyle="bold"
                     android:layout_marginTop="5dp"/>
 
                 <TextView
-                    android:id="@+id/lokasi"
+                    android:id="@+id/jenis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Jenis Izin"
@@ -77,13 +78,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tanggal Presensi"
+                    android:text="Tanggal mulai izin"
                     android:textColor="@color/grey"
                     android:textStyle="bold"
                     android:textSize="13dp"/>
 
                 <TextView
-                    android:id="@+id/tanggal"
+                    android:id="@+id/tgl_mulai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tanggal mulai izin"
@@ -93,14 +94,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Waktu presensi"
+                    android:text="Tanggal izin selesai"
                     android:textColor="@color/grey"
                     android:textSize="13dp"
                     android:textStyle="bold"
                     android:layout_marginTop="5dp"/>
 
                 <TextView
-                    android:id="@+id/waktu"
+                    android:id="@+id/tgl_selesai"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tanggal selesai"
@@ -109,7 +110,6 @@
                     />
 
             </LinearLayout>
-
 
         </LinearLayout>
 

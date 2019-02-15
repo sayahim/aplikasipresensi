@@ -48,6 +48,8 @@ public class PresensiMasuk extends Fragment {
 
     ProgressDialog pDialog;
 
+    String getjam;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -77,6 +79,35 @@ public class PresensiMasuk extends Fragment {
             @Override
             public void onClick(View v) {
 
+                int jam = Integer.valueOf(getjam);
+
+                // jika cek waktu pakai ini
+
+                //                jika presensi kurang dari jam 16
+                //                di uncoment jika akan di gunakan caranya tekan : ctrl + /
+
+
+//                if (jam < 16) {
+//
+//                    util.toastshow(getcontext(), "maaf belum waktunya presensi pulang");
+//
+//
+//                } else if (jam > 18) {
+//
+//                    util.toastshow(getcontext(), "maaf belum waktunya presensi pulang");
+//
+//
+//                } else {
+//
+//                    cekpresensi();
+//
+//                }
+
+                // =============================================================
+
+                // jika tanpa cek waktu pakai ini
+                // jangan lupa di coment jika tidak digunakan
+
                 cekPresensi();
 
             }
@@ -94,9 +125,11 @@ public class PresensiMasuk extends Fragment {
 
         DateFormat date = new SimpleDateFormat("dd-MM-yyyy");
         DateFormat time = new SimpleDateFormat("kk:mm");
+        DateFormat jam = new SimpleDateFormat("kk");
 
         gettanggal = date.format(cal.getTime());
         getwaktu = time.format(cal.getTime());
+        getjam = jam.format(cal.getTime());
 
         Log.e("waktu : ", "" + getwaktu);
         Log.e("tanggal : ", "" + gettanggal);
@@ -141,6 +174,8 @@ public class PresensiMasuk extends Fragment {
                                 Log.e("id", "" + getid);
                                 Log.e("id", "" + id);
 
+                                // menampilkan tanggal presensi sekarang
+
                                 if (gettanggal.equals(item.getTanggal())) {
 
                                     if (item.getJenis().equals("Berangkat")) {
@@ -150,6 +185,12 @@ public class PresensiMasuk extends Fragment {
                                     }
 
                                 }
+
+                                // menampilkan semua presesi
+
+//                                datapresensi.add(item);
+
+
 
                             }
 
@@ -174,22 +215,22 @@ public class PresensiMasuk extends Fragment {
 
                                     PresensiClassData data = datapresensi.get(position);
 
-                                        Log.e("latitude", "" +data.getLatitude());
+                                    Log.e("latitude", "" + data.getLatitude());
 
 
-                                        in = new Intent(getContext(), PresensiDetail.class);
+                                    in = new Intent(getContext(), PresensiDetail.class);
 
-                                        in.putExtra("id", String.valueOf(data.getId()));
-                                        in.putExtra("id_karyawan", String.valueOf(data.getId_karyawan()));
-                                        in.putExtra("tanggal", data.getTanggal());
-                                        in.putExtra("waktu", data.getWaktu());
-                                        in.putExtra("lokasi", data.getLokasi());
-                                        in.putExtra("latitude", data.getLatitude());
-                                        in.putExtra("longtitude", data.getLongtitude());
-                                        in.putExtra("jenis", data.getJenis());
-                                        in.putExtra("nama", data.getNama());
+                                    in.putExtra("id", String.valueOf(data.getId()));
+                                    in.putExtra("id_karyawan", String.valueOf(data.getId_karyawan()));
+                                    in.putExtra("tanggal", data.getTanggal());
+                                    in.putExtra("waktu", data.getWaktu());
+                                    in.putExtra("lokasi", data.getLokasi());
+                                    in.putExtra("latitude", data.getLatitude());
+                                    in.putExtra("longtitude", data.getLongtitude());
+                                    in.putExtra("jenis", data.getJenis());
+                                    in.putExtra("nama", data.getNama());
 
-                                        startActivity(in);
+                                    startActivity(in);
 
                                 }
                             });

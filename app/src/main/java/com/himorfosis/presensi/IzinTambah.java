@@ -276,7 +276,7 @@ public class IzinTambah extends AppCompatActivity {
             String uploadId = UUID.randomUUID().toString();
 
             //Creating a multi part request
-            new MultipartUploadRequest(this, uploadId, "http://jurukoding.com/presensi/api/izin_tambah.php")
+            new MultipartUploadRequest(this, uploadId, Koneksi.izin_post)
                     .addFileToUpload(path, "gambar") //Adding file
                     .addParameter("id_karyawan", getid)
                     .addParameter("tgl_mulai", getmulai)

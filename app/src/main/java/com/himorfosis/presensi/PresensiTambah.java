@@ -127,14 +127,14 @@ public class PresensiTambah extends AppCompatActivity {
 
                 // mengecek jam untuk presensi
 
-                int jam = Integer.valueOf(getjam);
-
-                if (jam > 8 ) {
-
-                    Util.toastShow(getApplicationContext(), "Maaf anda tidak terlambat presensi");
-
-                } else {
-
+//                int jam = Integer.valueOf(getjam);
+//
+//                if (jam > 8 ) {
+//
+//                    Util.toastShow(getApplicationContext(), "Maaf anda tidak terlambat presensi");
+//
+//                } else {
+//
                     if (getlokasi.equals("") || getlatitude.equals("") || getlongtitude.equals("") || getwaktu.equals("")) {
 
                         Util.toastShow(getApplicationContext(), "Harap lengkapi data");
@@ -153,8 +153,9 @@ public class PresensiTambah extends AppCompatActivity {
                         postPresensi();
 
                     }
+//
+//                }
 
-                }
 
             }
         });

@@ -89,7 +89,10 @@
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
+                    android:textColorHint="@color/hitam"
+                    app:passwordToggleDrawable="@drawable/password_visible_selector"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/hitam">
 
                     <EditText
                         android:id="@+id/password"
@@ -98,12 +101,15 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="20dp"
                         android:hint="Password"
+                        android:inputType="textPassword"
                         android:textColor="@color/hitam"
-                        android:textColorHint="@color/hitam"/>
+                        app:backgroundTint="@color/abu" />
 
                 </android.support.design.widget.TextInputLayout>
 
+
             </LinearLayout>
+
 
             <Button
                 android:id="@+id/login"

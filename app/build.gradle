@@ -33,7 +33,7 @@ dependencies {
     implementation 'com.android.volley:volley:1.1.0'
 
     // image upload service
-    compile 'net.gotev:uploadservice:2.1'
+    implementation 'net.gotev:uploadservice:2.1'
 
     implementation 'com.google.android.gms:play-services-location:15.0.1'
 

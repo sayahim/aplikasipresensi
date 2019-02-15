@@ -46,7 +46,7 @@ public class PresensiPulang extends Fragment {
     TextView kosong;
     ListView list;
 
-    String getid, getwaktu, gettanggal;
+    String getid, getwaktu, gettanggal, getjam;
 
     List<PresensiClassData> datapresensi = new ArrayList<>();
     PresensiAdapter adapter;
@@ -84,7 +84,32 @@ public class PresensiPulang extends Fragment {
             @Override
             public void onClick(View v) {
 
+                int jam = Integer.valueOf(getjam);
+
+                // jika cek waktu pakai ini
+
+//                jika presensi lebih dari jam 8
+//                di uncoment jika akan di gunakan caranya tekan : ctrl + /
+//
+//                if (jam > 8  ) {
+//
+//                    Util.toastShow(getContext(), "Maaf anda terlambat presensi");
+//
+//                } else if (jam < 6) {
+//                    Util.toastShow(getContext(), "Maaf belum waktunya presensi");
+//
+//
+//                } else {
+//
+//                    cekPresensi();
+//
+//                }
+
+                // jika tanpa cek waktu pakai ini
+                // jangan lupa di coment jika tidak digunakan
+
                 cekPresensi();
+
 
             }
         });
@@ -101,9 +126,11 @@ public class PresensiPulang extends Fragment {
 
         DateFormat date = new SimpleDateFormat("dd-MM-yyyy");
         DateFormat time = new SimpleDateFormat("kk:mm");
+        DateFormat jam = new SimpleDateFormat("kk");
 
         gettanggal = date.format(cal.getTime());
         getwaktu = time.format(cal.getTime());
+        getjam = jam.format(cal.getTime());
 
         Log.e("waktu : ", "" + getwaktu);
         Log.e("tanggal : ", "" + gettanggal);
@@ -225,6 +252,8 @@ public class PresensiPulang extends Fragment {
                                 Log.e("id", "" + getid);
                                 Log.e("id", "" + id);
 
+                                // menampilkan tanggal presensi sekarang
+
                                 if (gettanggal.equals(item.getTanggal())) {
 
                                     if (item.getJenis().equals("Pulang")) {
@@ -234,6 +263,11 @@ public class PresensiPulang extends Fragment {
                                     }
 
                                 }
+
+                                // menampilkan semua presesi
+
+//                                datapresensi.add(item);
+
 
                             }
 

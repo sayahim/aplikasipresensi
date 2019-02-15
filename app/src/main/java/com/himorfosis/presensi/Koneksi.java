@@ -2,7 +2,7 @@ package com.himorfosis.presensi;
 
 public class Koneksi {
 
-    public static final String URL = "http://192.168.137.1/";
+    public static final String URL = "http://192.168.1.105/";
 
     public static final String login = URL + "presensi/api/login.php";
 

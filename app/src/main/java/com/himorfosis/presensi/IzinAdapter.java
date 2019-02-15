@@ -16,10 +16,9 @@ public class IzinAdapter extends ArrayAdapter<IzinClassData> {
     Context context;
     List<IzinClassData> list;
 
-
     public IzinAdapter(Context context, List<IzinClassData> objects) {
 
-        super(context, R.layout.rowizin, objects);
+        super(context, R.layout.rowizinnew, objects);
         this.context = context;
         list = objects;
     }
@@ -41,7 +40,7 @@ public class IzinAdapter extends ArrayAdapter<IzinClassData> {
             LayoutInflater layoutInflater;
 
             layoutInflater = LayoutInflater.from(getContext());
-            convertView = layoutInflater.inflate(R.layout.rowizin, null);
+            convertView = layoutInflater.inflate(R.layout.rowizinnew, null);
 
         }
 

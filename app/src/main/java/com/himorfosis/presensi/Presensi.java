@@ -105,6 +105,13 @@ public class Presensi extends AppCompatActivity  {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent in = new Intent(Presensi.this, Utama.class);
+        startActivity(in);
 
     }
 
